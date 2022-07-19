@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:  hsl(229, 57%, 11%) url(/images/bg-desktop.png) no-repeat center bottom -120px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.main {
+    max-width: 1440px;
+    display: flex;
+    gap: 1rem;
+    
+    position: relative;
+}
+
+.left {
+    background-color: hsl(228, 56%, 26%);
+    width: 15rem;
+    padding-block: 1.4rem;
+    border-radius: 0 5rem 0 0;
+    padding-left: 1rem;
+    padding-right: 4rem;
+    display: block;
+    position: relative;
+}
+
+.top img{
+    width: 6rem;
+    margin-bottom: 1rem;
+ 
+}
+
+.down {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin-left: 0px;
+    flex: 1;
+}
+
+.box {
+    width: 2.3rem;
+    height: 2.5rem;
+    background: hsl(229, 57%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+}
+
+.box img {
+    width: calc(100% - 1.1rem);
+}
+
+.right {
+    background: hsl(228, 56%, 26%);
+    width: 26rem;
+    color: #fff;
+    font-family: 'Raleway';
+    font-size:14px;
+    height: 6.4rem;
+    padding: 1.4rem;
+    position: relative;
+    right: 0;
+    bottom: -1.95rem;
+    border-radius: 0.5rem;
+}
+
+.right small{
+    letter-spacing: 0.03rem;
+    font-weight: 200;
+}
+
+.right small span {
+    font-weight: 700;
+}
+
+.load {
+    width: 100%;
+    height: 0.7rem;
+    background-color: #fff;
+    margin-block: 0.45rem;
+    border-radius: 100vmax;
+    position: relative;
+}
+
+.load::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 78%;
+    background-image: linear-gradient(to right,  hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 100%;
+    border-radius: 100vmax;
+    top: 0;
+}
+
+.cnt {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.float {
+    position: absolute;
+    width: 7rem;
+    height: 3rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    right: 1rem;
+    top: -1.8rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.6rem 0 0.6rem;
+}
+
+.float h3 {
+    color: hsl(229, 57%, 11%);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.float h3 small {
+    font-size: 9px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        display: grid;
+        width: 100%;
+        place-content: center;
+        position: relative;
+    }
+    .left {
+        width: 100%;
+    }
+    .top img{
+        width: 7rem;
+        margin-bottom: 1rem;
+    }
+    .down {
+        display: flex;
+        gap: 0.7rem;
+        align-items: center;
+        margin-left: 0px;
+        flex: 1;
+    }
+    .box {
+        width: 2.5rem;
+        height: 2.8rem;
+        background: hsl(229, 57%, 11%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.6rem;
+    }
+    .right {
+        place-content: center;
+        width: 100%;
+        position: relative;
+        margin-top: -2rem;
+    }
+
+
+    .float {
+        position: absolute;
+        bottom: -1.8rem;
+        right: 28%;
+        top: 5.2rem;
+    }
+}
